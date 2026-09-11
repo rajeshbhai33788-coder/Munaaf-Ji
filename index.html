@@ -9,25 +9,24 @@
 
 <style>
   :root{
-    --bg: #F4F6F5;
-    --card: #FFFFFF;
-    --line: #E7EAE8;
-    --ink: #14181C;
-    --ink-dim: #6B7280;
-    --ink-faint: #9AA1A9;
-    --brand: #0B7F58;
-    --brand-soft: #E4F4EC;
-    --tg-blue: #2AABEE;
-    --tg-blue-dark: #1E96D6;
-    --bubble: #F0F4F2;
+    --bg:#F4F6F5;
+    --card:#FFFFFF;
+    --line:#E7EAE8;
+    --ink:#14181C;
+    --ink-dim:#6B7280;
+    --ink-faint:#9AA1A9;
+    --brand:#0B7F58;
+    --brand-soft:#E4F4EC;
+    --tg-blue:#2AABEE;
+    --tg-blue-dark:#1E96D6;
+    --bubble:#F0F4F2;
   }
 
   *{
     box-sizing:border-box;
   }
 
-  html,
-  body{
+  html,body{
     margin:0;
     padding:0;
     background:var(--bg);
@@ -55,10 +54,6 @@
     max-width:400px;
   }
 
-  /* =========================
-     TOP APP BAR
-  ========================= */
-
   .appbar{
     display:flex;
     align-items:center;
@@ -71,10 +66,6 @@
     text-align:center;
   }
 
-  /* =========================
-     MAIN CARD
-  ========================= */
-
   .card{
     background:var(--card);
     border:1px solid var(--line);
@@ -83,10 +74,9 @@
     box-shadow:
       0 1px 2px rgba(20,24,28,0.05),
       0 16px 32px rgba(20,24,28,0.07);
-
     opacity:0;
     transform:translateY(10px);
-    animation:rise 0.5s ease forwards;
+    animation:rise .5s ease forwards;
   }
 
   @keyframes rise{
@@ -96,17 +86,13 @@
     }
   }
 
-  @media (prefers-reduced-motion:reduce){
+  @media(prefers-reduced-motion:reduce){
     .card{
       opacity:1;
       transform:none;
       animation:none;
     }
   }
-
-  /* =========================
-     AVATAR
-  ========================= */
 
   .avatar-wrap{
     display:flex;
@@ -119,12 +105,11 @@
     border-radius:50%;
     overflow:hidden;
     padding:3px;
-    background:
-      linear-gradient(
-        135deg,
-        var(--brand),
-        var(--tg-blue)
-      );
+    background:linear-gradient(
+      135deg,
+      var(--brand),
+      var(--tg-blue)
+    );
   }
 
   .avatar-inner{
@@ -142,10 +127,6 @@
     display:block;
   }
 
-  /* =========================
-     NAME
-  ========================= */
-
   .name-row{
     display:flex;
     align-items:center;
@@ -161,12 +142,8 @@
     margin:0;
     text-align:center;
     line-height:1.35;
-    letter-spacing:-0.01em;
+    letter-spacing:-.01em;
   }
-
-  /* =========================
-     BADGES
-  ========================= */
 
   .badge-row{
     display:flex;
@@ -193,21 +170,6 @@
     color:var(--ink-dim);
   }
 
-  /* =========================
-     MANAGED BY
-  ========================= */
-
-  .managed-by{
-    text-align:center;
-    font-size:11.5px;
-    color:var(--ink-faint);
-    margin:10px 0 0;
-  }
-
-  /* =========================
-     DESCRIPTION
-  ========================= */
-
   .desc{
     text-align:center;
     font-size:13px;
@@ -215,10 +177,6 @@
     color:var(--ink-dim);
     margin:16px 4px 0;
   }
-
-  /* =========================
-     TRUST LIST
-  ========================= */
 
   .trust-list{
     display:flex;
@@ -248,10 +206,6 @@
     flex-shrink:0;
   }
 
-  /* =========================
-     JOIN INSTRUCTION
-  ========================= */
-
   .join-instruction{
     text-align:center;
     font-size:13px;
@@ -259,10 +213,6 @@
     color:var(--ink);
     margin:22px 4px 0;
   }
-
-  /* =========================
-     CTA BUTTON
-  ========================= */
 
   .cta{
     display:flex;
@@ -272,41 +222,28 @@
     width:100%;
     margin-top:20px;
     padding:16px 18px;
-
-    background:
-      linear-gradient(
-        135deg,
-        var(--tg-blue),
-        var(--tg-blue-dark)
-      );
-
+    background:linear-gradient(
+      135deg,
+      var(--tg-blue),
+      var(--tg-blue-dark)
+    );
     color:#fff;
     text-decoration:none;
     border-radius:14px;
-
     font-weight:700;
     font-size:15.5px;
     text-align:center;
-
     border:none;
-
-    box-shadow:
-      0 8px 20px rgba(42,171,238,0.28);
-
+    box-shadow:0 8px 20px rgba(42,171,238,.28);
     transition:
-      transform 0.12s ease,
-      box-shadow 0.12s ease;
+      transform .12s ease,
+      box-shadow .12s ease;
   }
 
   .cta:active{
-    transform:scale(0.98);
-    box-shadow:
-      0 4px 10px rgba(42,171,238,0.22);
+    transform:scale(.98);
+    box-shadow:0 4px 10px rgba(42,171,238,.22);
   }
-
-  /* =========================
-     CTA NOTE
-  ========================= */
 
   .cta-note{
     display:flex;
@@ -318,10 +255,6 @@
     color:var(--ink-faint);
     margin-top:10px;
   }
-
-  /* =========================
-     FALLBACK
-  ========================= */
 
   .fallback{
     display:none;
@@ -354,21 +287,16 @@
     font-weight:600;
   }
 
-  /* =========================
-     DIVIDER
-  ========================= */
-
   .divider{
     display:flex;
     align-items:center;
     justify-content:center;
     gap:10px;
     margin:26px 0 14px;
-
     color:var(--ink-faint);
     font-size:11px;
     font-weight:700;
-    letter-spacing:0.02em;
+    letter-spacing:.02em;
     text-align:center;
   }
 
@@ -380,10 +308,6 @@
     background:var(--line);
   }
 
-  /* =========================
-     ABOUT
-  ========================= */
-
   .about-text{
     font-size:12.5px;
     line-height:1.55;
@@ -391,53 +315,6 @@
     margin:0 0 12px;
     text-align:center;
   }
-
-  /* =========================
-     INFO TABLE
-  ========================= */
-
-  .info-table{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    border:1px solid var(--line);
-    border-radius:12px;
-    overflow:hidden;
-    text-align:center;
-  }
-
-  .info-row{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    gap:3px;
-    width:100%;
-    padding:11px 13px;
-    font-size:12.5px;
-    border-bottom:1px solid var(--line);
-    background:var(--card);
-    text-align:center;
-  }
-
-  .info-row:last-child{
-    border-bottom:none;
-  }
-
-  .info-row .k{
-    color:var(--ink-faint);
-    text-align:center;
-  }
-
-  .info-row .v{
-    color:var(--ink);
-    font-weight:700;
-    text-align:center;
-  }
-
-  /* =========================
-     FOOTER
-  ========================= */
 
   .footer-meta{
     margin-top:20px;
@@ -453,10 +330,6 @@
     font-weight:600;
     text-decoration:underline;
   }
-
-  /* =========================
-     DISCLAIMER
-  ========================= */
 
   .disclaimer{
     margin-top:10px;
@@ -479,48 +352,38 @@
 
 <div class="page">
 
-  <!-- TOP BAR -->
-
   <div class="appbar">
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <circle
+        cx="12"
+        cy="12"
+        r="12"
+        fill="#2AABEE"
+      />
+      <path
+        d="M17.5 7.2L15.4 17.3c-.16.7-.58.87-1.17.54l-3.24-2.39-1.56 1.5c-.17.17-.32.32-.65.32l.23-3.29 5.99-5.41c.26-.23-.06-.36-.4-.13l-7.4 4.66-3.19-1c-.7-.22-.71-.7.14-1.03l12.47-4.8c.58-.22 1.08.13.9.94z"
+        fill="#fff"
+      />
+    </svg>
 
 ```
-<svg
-  width="18"
-  height="18"
-  viewBox="0 0 24 24"
-  fill="none"
-  aria-hidden="true"
->
-  <circle
-    cx="12"
-    cy="12"
-    r="12"
-    fill="#2AABEE"
-  />
-
-  <path
-    d="M17.5 7.2L15.4 17.3c-.16.7-.58.87-1.17.54l-3.24-2.39-1.56 1.5c-.17.17-.32.32-.65.32l.23-3.29 5.99-5.41c.26-.23-.06-.36-.4-.13l-7.4 4.66-3.19-1c-.7-.22-.71-.7.14-1.03l12.47-4.8c.58-.22 1.08.13.9.94z"
-    fill="#fff"
-  />
-</svg>
-
 <span>Official Telegram Channel</span>
 ```
 
   </div>
 
-  <!-- MAIN CARD -->
-
   <div class="card">
 
 ```
-<!-- AVATAR -->
 <div class="avatar-wrap">
-
   <div class="avatar">
-
     <div class="avatar-inner">
-
       <img
         src="https://i.ibb.co/gYYfMS7/sm3m-Tlb-H6u1ka42-Umc-GLNhea1-Qb-FX9-TDbb-By-Wc-QQF1ody-PNz-Huj0jh-El-L3s-Vwbq64-RV7-Bt-W-f-B21-Qsxye-GBj.jpg"
         alt="HAJI SALMAN MEMON"
@@ -530,45 +393,28 @@
         fetchpriority="high"
         decoding="async"
       >
-
     </div>
-
   </div>
-
 </div>
 
 
-<!-- NAME -->
 <div class="name-row">
-
   <h1>HAJI SALMAN MEMON</h1>
-
 </div>
 
 
-<!-- BADGES -->
 <div class="badge-row">
-
-  <span class="badge">
-    ✓ Official Channel
-  </span>
-
-  <span class="badge alt">
-    Free to Join
-  </span>
-
+  <span class="badge">✓ Official Channel</span>
+  <span class="badge alt">Free to Join</span>
 </div>
 
 
-<!-- DESCRIPTION -->
 <p class="desc">
   Daily stock market sessions — updates, chart reading &amp; trading psychology, explained simply.
 </p>
 
 
-<!-- TRUST -->
 <div class="trust-list">
-
   <div class="trust-item">
 
     <svg
@@ -592,17 +438,14 @@
     </span>
 
   </div>
-
 </div>
 
 
-<!-- JOIN INSTRUCTION -->
 <p class="join-instruction">
   Tap below to join our official Telegram channel
 </p>
 
 
-<!-- CTA -->
 <a
   class="cta"
   id="joinBtn"
@@ -628,7 +471,6 @@
 </a>
 
 
-<!-- CTA NOTE -->
 <div class="cta-note">
 
   <svg
@@ -662,73 +504,51 @@
 </div>
 
 
-<!-- FALLBACK -->
-<div
-  class="fallback"
-  id="fallback"
->
-
-  <button
-    type="button"
-    id="copyBtn"
-  >
+<div class="fallback" id="fallback">
+  <button type="button" id="copyBtn">
     Button not opening? Tap to copy link
   </button>
-
 </div>
 
 
-<!-- DIVIDER -->
 <div class="divider">
   <span>ABOUT THIS CHANNEL</span>
 </div>
 
 
-<!-- ABOUT -->
 <p class="about-text">
   Official stock market education channel by HAJI SALMAN MEMON — free to join.
 </p>
 
 
-<!-- ADVERTISER -->
 <div class="footer-meta">
-
   Advertised by
-
   <a
     href="https://t.me/+3XoqJNLxYHswNTc1"
     rel="noopener"
   >
     Ad Build Agency
   </a>
-
 </div>
 
 
-<!-- DISCLAIMER -->
 <div class="disclaimer">
-
   Educational content only. Not investment, trading or financial advice.
   <br>
-
   No profit or return is promised or implied. Decisions are your own.
   <br>
-
   Terms · Privacy · Disclaimer
 
   <div class="copyright">
     © 2026 HAJI SALMAN MEMON. All rights reserved.
   </div>
-
 </div>
 ```
 
   </div>
-
 </div>
 
 <script>
-
   var joinBtn = document.getElementById('joinBtn');
   var fallback = document.getElementById('fallback');
   var copyBtn = document.getElementById('copyBtn');
@@ -737,28 +557,18 @@
     'https://t.me/+kwXpPAbLyrNjY2M9';
 
 
-  /* =========================
-     TELEGRAM BUTTON
-  ========================= */
-
   joinBtn.addEventListener('click', function(){
 
     setTimeout(function(){
 
       if(document.visibilityState === 'visible'){
-
         fallback.classList.add('show');
-
       }
 
     }, 1200);
 
   });
 
-
-  /* =========================
-     COPY LINK
-  ========================= */
 
   copyBtn.addEventListener('click', function(){
 
@@ -781,7 +591,6 @@
       });
 
   });
-
 </script>
 
 </body>
